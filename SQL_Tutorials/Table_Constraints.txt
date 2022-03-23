@@ -1,0 +1,12 @@
+CREATE TABLE student (
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) UNIQUE,
+    hobby VARCHAR(20) DEFAULT "undecided",
+    PRIMARY KEY(student_id)
+);
+- AUTO_INCREMENT means that no data needs to be given for student_id
+    - it will automatically add 1 to the one before
+- NOT NULL means that name cannot have a null value
+- UNIQUE means that the entered data must be different to what is already in the table
+- DEFAULT "undecided" means that if no data is given then it is given  "undecided"

@@ -1,0 +1,34 @@
+UPDATE student
+SET major = "Bio"
+WHERE major = "Biology";
+- Changes all instances of Biology to be Bio
+
+UPDATE student
+SET major = "Bio"
+WHERE student_id = 4;
+- Changes major to Bio for 1 specific student
+
+
+UPDATE student
+SET major = "Bio", name = "Tim"
+WHERE student_id = 4 OR major = "Biology";
+- Chnages when either are true
+- You can change multiple things at the same time
+
+
+UPDATE student
+SET major = "Bio", name = "Tim";
+- Does this for all elements
+
+
+DELETE FROM student;
+- Deletes all rows from table
+
+
+DELETE FROM student
+WHERE student_id = 5;
+- deletes row where student_id = 5
+
+DELETE FROM student
+WHERE student_id = 5 AND major = "Comp Sci";
+- Only deletes if both are true

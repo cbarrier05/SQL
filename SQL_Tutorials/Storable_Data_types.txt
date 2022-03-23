@@ -1,0 +1,12 @@
+INT             
+- Whole Numbers
+DECIMAL(M,N)    
+- Decimal number,m = total number of digits, n = number of decimal places
+VARCHAR(M)
+- String of length M 
+BLOB
+- Large amounts of binary data
+DATE
+- Date in format YYY - MM - DD
+TIMESTAMP
+- Similar to DATE but also includes time, it is used to record when things happen

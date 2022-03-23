@@ -1,0 +1,17 @@
+INSERT INTO student VALUES(1, "Jack", "Biology");
+- How to insert student into table
+- Put values into it in the order columns are defined
+ - 1 refers to student_id
+ - "Jack" refers to name
+ - "Biology" refers to major
+
+
+SELECT * FROM student;
+- Selects and returns all the data stored in student table
+
+
+INSERT INTO student(student_id, name) VALUES(2, "Kate");
+- Only inserts data into student_id and name columns not major
+
+- Doesn't let you insert 2 things with the same primary key
+- Each must be different

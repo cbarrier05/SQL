@@ -1,0 +1,67 @@
+SELECT * FROM student;
+- Returns all rows in the table
+
+
+SELECT * 
+FROM student;
+- This does the same thing, command only ends at ;
+
+
+SELECT name
+FROM student;
+- Returns only the names from the table
+
+
+SELECT student.name, student.major
+FROM student;
+- Returns both name and major
+ - student. makes it clearer which table
+
+
+SELECT student.name, student.major
+FROM student
+ORDER BY name;
+- Orders the returned values by alphabetical order of name, ascending by default
+
+
+SELECT student.name, student.major
+FROM student
+ORDER BY name DESC;
+- Makes it in descending order
+
+SELECT student.name, student.major
+FROM student
+ORDER BY student_id;
+- Can still order by a column even if that specific one isn't returned
+
+
+SELECT *
+FROM student
+ORDER BY major, student_id;
+- Orders by major, if finds any of same major, orders those by student_id
+
+
+SELECT *
+FROM student
+LIMIT 2;
+- Only returns first 2 rows
+
+SELECT *
+FROM student
+ORDER BY student_id DESC
+LIMIT 2;
+- Combine ORDER and LIMIT, now returns the 2 rows with highest student_id
+
+
+SELECT *
+FROM student
+WHERE major = "Bio";
+- Only returns students where major = "Biology"
+
+SELECT *
+FROM student
+WHERE major IN ("Bio", "Chemistry);
+- Allows to select from a range of values
+
+
+- Can use operators such as: =, <, >, <=, >=, <>, AND, OR
