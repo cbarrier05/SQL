@@ -1,0 +1,26 @@
+- Cant make a foreign key until both tables have been created
+
+CREATE TABLE branch(
+    branch_id INT PRIMARY KEY,
+    mgr_id INT,
+    mgr_start_date DATE,
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+);
+- How to set mgr_id as a foreign key
+- REFERENCES employee(emp_id), which is the table and column that the foreign key points to
+
+
+ALTER TABLE employee
+ADD FOREIGN KEY(branch_id)
+REFERENCES branch(branch_id)
+ON DELETE SET NULL;
+- How to update an existing column in employees to be a foreign key pointing to a column in branch 
+
+CREATE TABLE branch(
+    branch_id INT PRIMARY KEY,
+    mgr_id INT,
+    mgr_start_date DATE,
+    PRIMARY KEY(mgr_id, branch_id)
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+);
+- Column can be both primary and foreign at the same time and multiple of each can be set

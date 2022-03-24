@@ -65,3 +65,36 @@ WHERE major IN ("Bio", "Chemistry);
 
 
 - Can use operators such as: =, <, >, <=, >=, <>, AND, OR
+
+
+SELECT name AS Student_Name
+FROM student
+WHERE major IN ("Bio", "Chemistry);
+- This will return the name column but call it Student_Name
+
+
+SELECT DISTINCT name
+FROM student;
+- This returns every possible name in the column
+- If there are 2 Jims, 1 Kate and 1 John it will return Jim, Kate and John
+
+
+SELECT COUNT(name)
+FROM student;
+- Counts how many elements in name column
+
+
+SELECT COUNT(name)
+FROM student
+WHERE major = "Biology";
+- How to count how many elements in name fufill WHERE requirements
+
+
+SELECT AVG(grade)
+FROM student;
+- Returns the average grade
+
+
+SELECT SUM(grade)
+FROM student;
+- Returns sum of everything in average

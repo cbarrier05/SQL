@@ -1,0 +1,15 @@
+SELECT COUNT(sex), sex
+FROM employee
+GROUP BY sex;
+- Returns how many females and how many males
+
+
+SELECT SUM(total_sales), name
+FROM student
+GROUP BY name;
+- This finds the sum of all sales per employee and returns it
+- eg, if table looks like This     name   total_sales
+                                   John   100
+                                   James  200
+                                   John   500
+- this returns: John 600 and James 200
