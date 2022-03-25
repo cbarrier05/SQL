@@ -1,0 +1,19 @@
+- Operator to combine results of multiple SELECT statments into 1
+
+
+SELECT name
+FROM employee;
+
+SELECT job
+FROM employee;
+- These are returned in 2 different lists
+
+
+SELECT name
+FROM employee;
+UNION
+SELECT job
+FROM employee;
+- Both now return as part of the same list
+- They both need the same number of columns being called
+- Need to be similar data types

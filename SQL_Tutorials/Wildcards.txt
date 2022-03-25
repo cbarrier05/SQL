@@ -1,0 +1,22 @@
+- Find data that matches a pattern
+
+
+SELECT *
+FROM client
+WHERE client_name LIKE "%LLC";
+- This returns client names where it ends with LLC
+- % means there can be any number of characters before it
+- _ means only 1 characters
+
+SELECT *
+FROM client
+WHERE client_name LIKE "%LLC_1%";
+- This returns nams that have any number of characters before LLC then 1 character then a 1 and then any number of characters after
+
+
+SELECT *
+FROM years
+WHERE year LIKE "197_";
+- This returns any year that is in the 70s
+
+

@@ -1,0 +1,25 @@
+- Combine rows from 2 or more tables based on a related column
+
+
+SELECT employee.emp_id, employee.emp_name, branch.branch_name
+FROM employee
+JOIN branch
+ON employee.emp_id = branch.mgr_id;
+- Combines  emp_id, emp_name and branch_name
+- when an emp_id and mgr_id match up
+- So only managers are returned with emp_id, emp_name and branch_name
+
+
+SELECT employee.emp_id, employee.emp_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+ON employee.emp_id = branch.mgr_id;
+- LEFT JOIN include all rows from employee table
+- But only emp_id that appear in mgr_id have branch)name attached, not the rest 
+
+
+SELECT employee.emp_id, employee.emp_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch.mgr_id;
+- RIGHT JOIN includes all rows from branch and only ones from employee when emp_id match up with mgr_id
