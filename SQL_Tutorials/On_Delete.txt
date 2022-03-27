@@ -1,0 +1,18 @@
+CREATE TABLE branch (
+    branch_id INT PRIMARY KEY,
+    branch)name VARCHAR(40),
+    mgr_id INT,
+    mgr_start_date DATE,
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+);
+- ON DELETE SET NULL means that if the associated emp_id is removed, mgr_id is set to NULL
+
+
+CREATE TABLE branch (
+    branch_id INT PRIMARY KEY,
+    branch)name VARCHAR(40),
+    mgr_id INT,
+    mgr_start_date DATE,
+    FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET CASCADE
+);
+- ON DELETE SET CASCADE means that if the associated emp_id is removed, the whole row in branch is removed

@@ -1,0 +1,20 @@
+- Dictates what should happen when a certain function is performed
+- Triggers need to be created in the command line
+
+
+CREATE TABLE test(
+    message VARCHAR(100)
+);
+
+
+DELIMITER $$
+CREATE 
+    TRIGGER my_trigger BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        INSERT INTO test VALUES("added new employee");
+    END$$
+DELIMITER ;
+- This creates a trigger so that before anything is inserted into employee table, "added new employee" is inserted to test
+- DELIMITER $$ changes the ; to $$, allowing a statement to be put in to the trigger 
+- DELIMITER ; changes it back
